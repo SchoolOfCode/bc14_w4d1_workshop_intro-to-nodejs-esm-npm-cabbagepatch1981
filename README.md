@@ -4,7 +4,7 @@ Node.js gives us the power to run JavaScript out of the browser. Running JavaScr
 
 Make sure you have the relevant version of Node.js for your operating system installed. Having at least the current LTS version is recommended.
 
-## Task 1: Checking your setup
+## Task 1: Checking your setup 🍏
 
 First of all, let's check our tools are set up correctly. Open your terminal and enter the following code to check your Node.js version:
 
@@ -20,7 +20,7 @@ npm -v
 
 You should see some information about the versions that you've got installed on your machine, which means that they're all set up and ready to use. If you see some errors, it may mean your installation hasn't worked properly. Have a google to find out what might have gone wrong.
 
-## Task 2: Setting up a new Node.js project
+## Task 2: Setting up a new Node.js project 🍏
 
 We don't have an existing Node.js project (in other words, there's no `package.json` already in the repo). To quickly initialise a Node.js project with default options, we can use the `npm init -y` command.
 
@@ -28,7 +28,7 @@ _🧪 At the root level of this repo you should now have a `package.json`. Feel 
 
 _❗ Note that we can skip this initialisation step if there's already a `package.json`._
 
-## Task 3: Adding a JavaScript file
+## Task 3: Adding a JavaScript file 🍏
 
 Let's add our first JavaScript file to the project. Create a file named `hello.js` containing the following:
 
@@ -40,7 +40,7 @@ _🧪 For feedback on this step, run `node hello.js` in your terminal, which sho
 
 _❗ Note that this code assumed that `console` is globally available/present (like it is in the browser). Whilst `console` is available globally in Node.js, in general we shouldn't assume that the things we've gotten used to using in the browser are also available in Node.js._
 
-## Task 4: Adding a learning journal
+## Task 4: Adding a learning journal 🍏
 
 Say we're building a Node.js project to help us keep track of things we've learned or would like to learn (they don't have to be related to tech).
 
@@ -90,7 +90,7 @@ Although it might seem unnecessary in our case (since `things_to_learn.js` doesn
 To let Node.js know we want to use ESM (the current module system), open the `package.json` file and add the following key-value pair to the outermost object (remember that in JSON, key-value pairs in objects are separated by commas).
 
 ```json
-  "type": "module"
+  "type": "module" 🍏
 ```
 
 Now that we've enabled ESM within this Node.js project, let's try and use `roadmap` (from `things_to_learn.js`) in another file/module. To do this, we have to explicitly "export" `roadmap` by placing `export` before the variable declaration. In `things_to_learn.js`, you should have something like:
@@ -98,7 +98,7 @@ Now that we've enabled ESM within this Node.js project, let's try and use `roadm
 ```js
 export const roadmap = [
   // Whatever you've written here
-];
+]; 🍏
 ```
 
 _🧪 Again, to check things are still working, you can temporarily add `console.log(roadmap);` to `things_to_learn.js` and then run `node things_to_learn.js` in your terminal. Eventually you should see the list printed in your terminal._
@@ -113,7 +113,7 @@ import { roadmap } from "./things_to_learn.js";
 console.table(roadmap); // Similar to console.log, but prints information as a table.
 ```
 
-_🧪 To check the code works, have Node.js run the `display.js` file. Try to recall how we ran a file with Node.js earlier._
+_🧪 To check the code works, have Node.js run the `display.js` file. Try to recall how we ran a file with Node.js earlier._ 🍏
 
 ## Task 7: Installing third party packages
 
@@ -135,13 +135,13 @@ Then, enter the following in your terminal to install this package:
 npm i write-json-file
 ```
 
-_🧪 You may see a lot of information appear in the terminal, but eventually you should see a message saying packages have been added._
+_🧪 You may see a lot of information appear in the terminal, but eventually you should see a message saying packages have been added._ 🍏
 
 _❗ We don't need to commit and push the contents of the `node_modules` folder to GitHub, so we've added it to a `.gitignore` file. This is mainly because the `node_modules` folder, whilst important when we want to run our code, can be recreated from the `package.json` via `npm i`._
 
 ## Task 8: Importing and using third party packages
 
-Create a file named `save_as_json.js` and import the `roadmap` (from `things_to_learn.js`) into it.
+Create a file named `save_as_json.js` 🍏 and import the `roadmap` (from `things_to_learn.js`) into it. 🍏
 
 Use the documentation (https://www.npmjs.com/package/write-json-file) to figure out how we can complete the following:
 
@@ -161,7 +161,7 @@ await writeJsonFile("roadmap.json", roadmap);
 
 </details>
 
-_🧪 To check if the code works, run `save_as_json.js` with Node.js. Try to recall how we ran a file with Node.js earlier._
+_🧪 To check if the code works, run `save_as_json.js` with Node.js. Try to recall how we ran a file with Node.js earlier._ 🍏
 
 ## Task 9: Adding an NPM script
 
@@ -173,7 +173,7 @@ Let's set up an NPM script which will let us run the `save_as_json.js`. In the `
 "save": "node save_as_json.js"
 ```
 
-_🧪 To check if the shortcut has been set up correctly, delete `roadmap.json` (if it already exists) and then enter `npm run save` in your terminal. You should see it run `save_as_json.js` and a new `roadmap.json` should be created._
+_🧪 To check if the shortcut has been set up correctly, delete `roadmap.json` (if it already exists) and then enter `npm run save` in your terminal. You should see it run `save_as_json.js` and a new `roadmap.json` should be created._ 🍏
 
 _❗ It may seem unnecessary to set up a shortcut here as `node save_as_json.js` isn't that long to begin with. However, as we begin to delve deeper into the JavaScript ecosystem, you'll find certain packages require longer, more complex commands -- and in those cases, NPM scripts can be quite convenient._
 
